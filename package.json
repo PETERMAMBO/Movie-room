@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "daisyui": "^4.12.10"
+  },
+  "name": "z-shows",
+  "version": "1.0.0",
+  "main": "home.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

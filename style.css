@@ -1,0 +1,648 @@
+body{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: "Niramit",sans-serif;
+    background-color: #131720;
+}
+header{
+    background-color:#131720;
+    margin-top: 0px;
+    padding:10px;
+    flex-wrap: wrap;
+    position: fixed;
+    top:0px;
+    width:100%;
+    z-index: 1000;
+}
+header nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header nav li{
+    list-style-type: none;
+}
+header nav li a{
+    text-decoration: none;
+    color:white;
+}
+.search-account{
+    display: flex;
+    justify-content: end;
+    margin-left: 200px;
+    gap:40px;
+}
+.list-first-child a{
+    font-size:30px;
+    color:red;
+    text-transform: uppercase;
+    margin-right: 200px;
+}
+.shows-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.series-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+main{
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 100px;
+
+}
+
+.thumbnail {
+    max-width: 100%;
+    border-radius: 4px;
+    height:200px;
+    object-fit: cover;
+}
+
+.title{
+   color:grey;
+    
+}
+.card img:hover{
+    overflow: hidden;
+    transform: scale(1.2);
+    transition: all 0.7s ease-in-out;
+}
+
+aside{
+    display:none;
+}
+.hidden{
+    width:-0px;
+    display: none;
+    outline: o;
+    padding:10px;
+    border-radius: 8px;
+    background-color: #131730;
+    color:white;
+ 
+}
+.hidden:active{
+    width:100px;
+    transition:0.8s ease-in-out;
+}
+.side-search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#pre-loader{
+    background: black url(Dual\ Ring@1x-0.8s-200px-200px.gif) no-repeat center center;
+    height:100vh;
+    width:100%;
+    position: fixed;
+    top:0px;
+    z-index:5000;
+}
+section{
+   display: none;
+}
+.floating-vector{
+    height:150px;
+    width:150px;
+    object-fit: cover;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.popup-container{
+    width:100%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1080;
+    display: none;
+}
+.popup{
+    display: flex;
+    flex-direction: column;
+    background-color: #131730;
+    color:white;
+    width:300px;
+    height:auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 5%;
+    padding: 10px;
+}
+.popup button{
+    padding:10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color:black;
+    background-color: white;
+    border-style: none;
+    font-size: 17px;
+    font-weight: 400;
+    width:200px;
+}
+.popup i{
+    cursor: pointer;
+    margin-left: 240px;
+   
+}
+.popup p{
+    font-size: 20px;
+}
+.background-container{
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.background-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:url(movie\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%);
+    z-index: 1;
+}
+.background-container h2,
+.background-container p {
+    position: relative;
+    z-index: 20;
+    margin: 0;
+    padding: 0 20px; 
+    color:white;
+}
+.background-container form{
+    z-index: 20;
+}
+.background-container input{
+    outline: none;
+    padding: 10px;
+    background-color: #131720;
+    color:white;
+    border-radius: 10px;
+    width:550px;
+    border-width: 1px;
+    font-size: 17px;
+    margin-top: 30px;
+    height:30px;
+    font-weight: lighter;
+}
+.middle-search{
+    font-weight: lighter;
+}
+.background-container::placeholder{
+    font-size: 20px;
+}
+
+
+.background-container h2{
+    font-size: 50px;
+    font-weight: 700;
+    filter: contrast(100px);
+    filter: brightness(100%);
+    text-transform: capitalize;
+}
+.background-container p{
+    font-size: 20px;
+    color:white;
+    opacity: 0.7;
+    text-align: center;
+}
+.profile-container form img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 35;
+    object-fit: cover;
+
+}
+.profile-container form input{
+    display: none;
+}
+.profile-container form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:5px;
+   
+}
+.profile-container label{
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    padding:1px;
+    font-size: 12px;
+    width:40px;
+    text-align: center;
+    border-radius: 10px;
+    transform: translateY(-25px);
+    cursor: pointer;
+    margin-top: 25px;
+    z-index:30;
+}
+.input-profile-container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:20px;
+   
+}
+#accountClose{
+    position: absolute;
+    left:500px;
+}
+.profile-container{
+    background-color:#131720;
+    width:50%;
+    height:auto;
+    z-index:1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    position: fixed;
+    top:0px;
+    left:0px;
+    animation: account 0.5s ease-in both;
+}
+@keyframes account{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.profile-container h1{
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+}
+.profile-container hr{
+    width:80%;
+}
+.profile-name input{
+    padding:10px;
+    justify-content: center;
+    border-radius: 10px;
+    width:300px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    text-align: center;
+    font-size: 17px;
+    font-weight: normal;
+}
+.profile-maturity-container{
+    margin-left: 50px;
+}
+.profile-maturity-container h2{
+    color: white;
+    opacity:0.7;
+}
+.profile-maturity-container p{
+    color: white;
+    font-weight: 900;
+}
+.profile-maturity-container h3{
+    border-style: solid;
+    border-width: 1px;
+    padding:5px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(110, 109, 109);
+    border-color: rgb(110, 109, 109) ;
+    color:white;
+    opacity:1;
+}
+.profile-maturity-container button{
+    background-color: transparent;
+    color:rgb(87, 85, 85);
+    border-color: white;
+    width:60px;
+    border-width: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.auto-play-controls{
+    display: block;
+    width:350px;
+    margin-left: 130px;
+}
+.auto-play-controls input{
+   margin-left: 20px;
+   margin-top: 20px;
+}
+.profile-container .auto-play-controls label{
+    font-weight: 700;
+    border-style: none;
+    color: white;
+    opacity: 0.9;
+    font-size: 14px;
+
+}
+.save-cancel-delete-btns{
+    display: flex;
+    margin-top: 20px;
+    gap:20px;
+}
+.save-btn{
+    padding:10px;
+    background-color: white;
+    color:black;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 6px;
+    border-color: white;
+    cursor: pointer;
+    border-width: 1px;
+   
+}
+.save-btn:hover{
+    background-color: transparent;
+    color:rgb(88, 88, 88);
+    transition: 0.5s;
+}
+.save-btn:active{
+    background-color: transparent;
+    color:rgb(88, 88, 88);
+    transition: 0.5s;
+}
+.cancel-btn{
+    padding:10px;
+    background-color: transparent;
+    color:rgb(88, 88, 88);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 6px;
+    border-color: white;
+    cursor: pointer;
+    border-width: 1px;
+    
+}
+.cancel-btn:hover{
+    background-color: white;
+    color:black;
+    transition: 0.5s;
+}
+.cancel-btn:active{
+    background-color: white;
+    color:black;
+    transition: 0.5s; 
+}
+.delete-btn{
+    padding:10px;
+    background-color: transparent;
+    color:rgb(88, 88, 88);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 6px;
+    border-color: white;
+    cursor: pointer;
+    border-width: 1px;
+   
+}
+.delete-btn:hover{
+    background-color: white;
+    color:black;
+    transition: 0.5s;
+}
+.delete-btn:active{
+    background-color: white;
+    color:black;
+    transition: 0.5s; 
+}
+
+@media screen and (max-width:1200px){
+    header{
+        display: none;
+    }
+    aside{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        gap:100px;
+        margin-top: 0px;
+        background-color: #131720;
+        backdrop-filter: blur(0.7);
+        color:red;
+        position: fixed;
+        width: 100%;
+        top:0px;
+        z-index:1000;
+        flex-wrap: wrap;
+    }
+    aside h2{
+        cursor: pointer;
+    }
+    aside i{
+        cursor:pointer;
+        color: white;
+    }
+    .card{
+        width:120px;
+        height:auto;
+    }
+    aside h2:active{
+        transform: scale(0.8);
+        transition: 0.5s;
+    }
+    .box{
+        width: 120px;
+        height: auto;
+    }
+    section{
+        display: block;
+        background-color:#131720;
+        box-shadow: 4px 10px 8px rgb(70, 69, 69);
+        height: 100vh;
+        width:200px;
+        position: fixed;
+        top: 70px;
+        backdrop-filter: blur(10);
+        z-index:1000;
+        display: none;
+        left:-200px;
+        transform: translateX(-180px);
+        transition: transform 0.8s ease-in-out;
+    }
+    section.active{
+        transform: translateX(0px);
+
+    }
+    section li a{
+        text-decoration: none;
+        color:white;
+        font-size: 20px;
+
+    }
+    section li{
+        list-style-type: none;
+        padding-left: 20px;
+        font-size: 20px;
+        padding-top: 45px;
+        width:auto;
+    }
+    section i{
+        transform: translateY(5px);
+        color:white;
+    }
+    section li:hover{
+        margin-left: 5px;
+        box-sizing: border-box;
+    }
+    #closeButton{
+        position: absolute;
+        left:150px;
+        top:10px;
+        color: white;
+        background-color: red;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    #closeButton:active{
+        opacity: 1;
+    }
+    .background-container h2{
+        line-height: 40px;
+        font-size: 45px;
+        text-align: center;
+    }
+    .background-container p{
+        line-height: 20px;
+        text-align: center;
+        font-size: 17px;
+        color:grey;
+        margin-top: 30px;
+    }
+    .background-container input{
+        width:300px;
+        margin-left: 20px;
+       
+    }
+    .profile-container label{
+        transform: translateY(0px);
+        color: white;
+        border-style: solid;
+        border-width: 1px;
+        padding:3px;
+        width:50px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 13px;
+        margin-top: 0px;
+    }
+    .profile-container{
+        background-color: grey;
+        width:100%;
+        height:100vh;
+        z-index:80;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+    .input-profile-container{
+        display: block;
+    }
+    .profile-maturity-container{
+        margin-left: 0px;
+    }
+    .auto-play-controls input{
+        margin-left: 20px;
+        margin-top: 20px;
+     }
+     .auto-play-controls{
+        display: block;
+        width:380px;
+        margin-left: 0px;
+    }
+    .save-btn, .cancel-btn, .delete-btn{
+        padding:3px;
+        letter-spacing: 3px;
+    }
+    .save-cancel-delete-btns{
+        gap:10px;
+    }
+    .profile-container{
+        background-color:#131720;
+        width:95%;
+        margin-left: 30px;
+        height:auto;
+        z-index:8000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        position: fixed;
+        top:0px;
+        left:0px;
+        animation: account 0.5s ease-in both;
+    }
+    #accountClose{
+        position: absolute;
+        left:300px;
+    }
+   
+    
+}
+

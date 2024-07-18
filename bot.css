@@ -1,0 +1,243 @@
+body {
+    font-family: "Niramit", sans-serif;
+}
+
+.main-chatbot-container {
+    display: flex;
+    justify-content:center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top:0px;
+    right: 0;
+    float: right;
+    animation: divein 0.8s both;
+}
+
+@keyframes divein{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.chatbot-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-style: solid;
+    border-color: wheat;
+    border-width: 1px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(54, 54, 54, 0.1);
+    overflow: hidden;
+}
+.bot-directory ul{
+    background-color: white;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 12%;
+    left:40%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 4500;
+    display: none;
+}
+.bot-directory ul li{
+    list-style-type: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.bot-directory ul li:hover{
+    background-color: #131720;
+    color: white;
+    transition: all 0.6s;
+
+}
+
+.bot-plus-peter img{
+    background-color: white;
+    border-radius: 50%;
+}
+.bot-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color:#f5f5f5;
+    color: black;
+}
+
+.bot-plus-peter {
+    display: flex;
+    align-items: center;
+}
+
+.bot-picture {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.online-status {
+    color: green;
+}
+
+.material-icons {
+    cursor: pointer;
+}
+
+.message-plus-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.text-container {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 280px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.chat-with-me-section,
+.user-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.user-message{
+    background-color:rgb(163, 235, 163);
+    animation: floatright 0.5s both;
+    color: white;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+}
+.chat-with-me-section{
+    background-color:#EBEDE8;
+    animation: floatleft 0.5s both;
+    color: black;
+   
+}
+
+.chat-with-me-section {
+    justify-content: flex-start;
+}
+
+.chat-with-me-section .bot-message-picture {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.chat-with-me-section .bot-message {
+    background-color: #e1f5fe;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    text-align: left;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .user-text {
+    background-color: #d1c4e9;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    text-align: right;
+}
+
+.user-message-input {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+.user-message-input textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+    outline: none;
+    height: 20px;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.user-message-input textarea::-webkit-scrollbar{
+    display: none;
+}
+
+.user-message-input .material-icons {
+    margin-left: 10px;
+    cursor: pointer;
+    color: red;
+}
+@media screen  and (max-width:1200px){
+    .text-container {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-chatbot-container {
+        display: flex;
+        justify-content:center;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        z-index: 1050;
+        top:0px;
+        left: 0px;
+        animation: divein 0.8s both;
+    }
+    
+    
+}
+@keyframes floatleft{
+    from{
+     transform: translateX(-50%);
+     opacity: 0;
+    }
+    to{
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+@keyframes floatright{
+    from{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to{
+       transform: translateX(0%);
+       opacity: 1;
+    }
+}

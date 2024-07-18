@@ -1,0 +1,390 @@
+
+.profile-container{
+    display: none;
+}
+.profile-container i{
+    color:white;
+    position: absolute;
+    top:15px;
+    left:900px;
+    cursor: pointer;
+}
+#profileName{
+    display: none;
+}
+.waiting-message{
+    position: fixed;
+    z-index: 300;
+    top:150px;
+    justify-content: center;
+    background:rgba(255,255,255,0.1);
+    width: 100%;
+    
+    display: none;
+}
+#message{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#micButton{
+   color:white;
+   transform: translateX(-50px);
+  
+   cursor: pointer;
+   margin-top:50px;
+  
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.waiting-message img{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width:1200px){
+    .profile-container i{
+        left:280px;
+        top:15px;
+    }
+    .profile-container h1{
+        margin-top: 0px;
+    }
+    .profile-container{
+        width: 100%;
+        margin-left: 0px;
+        z-index: 8000;
+        background-color: #131720;
+    }
+    #profileName{
+        display: flex;
+    }
+    .auto-complete ul{
+        width:300px;
+        margin-top: 15px;
+        
+       
+    }
+    #micButton{
+        color:white;
+        cursor: pointer;
+        margin-top:50px;
+     }
+     .about-us-page-container{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+     }
+     .about-us-page-container p{
+        font-size: 17px;
+     }
+     .cookie-container{
+        background-color: #131720;
+        color:white;
+        position: fixed;
+        bottom:0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        transform: translateX(-850px);
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1020;
+        width: fit-content;
+        height: fit-content;
+        padding: 20px;
+        border-radius: 10px;
+      
+        
+    }
+    .cookie-container .cookie-policy{
+        width: 3200px;
+    }
+   
+}
+@media print{
+    #topHeader * {
+        display: none;
+    }
+    #sidebarMenu * {
+        display: none;
+    }
+    #backgroundContainer * {
+         display: none;
+    }
+    #backgroundContainer {
+        height:0vh;
+    }
+    #text-in-print{
+        display: flex;
+       
+        text-align: center;
+    }
+    
+    
+}
+.auto-complete li{
+    list-style-type: none;
+    cursor: pointer;
+    color:white;
+    text-align: start;
+    padding:10px;
+    font-size: 16px;
+   
+}
+.auto-complete ul {
+    margin-top: 15px;
+    width: 300px;
+    padding:10px;
+    border-radius: 8px;
+    transform: translateY(-15px);
+    background-color: #131720;
+    max-height: 100px;
+    overflow-y: scroll;
+    text-align: start;
+}
+
+.auto-complete ul li:hover{
+    background-color: rgb(87, 86, 86);
+    transition: 0.5s;
+}
+.mic-plus-input{
+    display: flex;
+    justify-content: center;
+    align-items:first baseline;
+
+}
+#text-in-print{
+    z-index: 500;
+    
+}
+
+
+
+
+/* About us page*/
+
+.about-us-page-container img{
+    object-fit: cover;
+    width: 30%;
+    margin-top: 50px;
+    height:80vh;
+    filter: brightness(40%);
+    border-radius: 20px;
+}
+
+.about-us-page-container{
+    background-color:rgba(0,0,0,0.3);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    height: fit-content;
+    margin-top: 50px;
+    background: url(african-american-man-watching-streaming-service-home-alone.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+.about-us-page-container p{
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
+.about-us-page-container button{
+    padding: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.middle-container{
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    height:50px;
+    margin-top: 20px;
+   
+}
+.footer-container{
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    margin-top: 20px;
+}
+
+/* footer container */
+
+.footer-container a{
+    text-decoration: none;
+    color: white;
+}
+.footer-container ul li{
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+    width: fit-content;
+}
+.footer-container ul li:hover{
+    background-color: white;
+    color: #131720;
+    transition: all 0.5s;
+    border-radius: 8px;
+   
+}
+.footer-container a:hover{
+    color: #131720;
+    transition: 0.5s;
+}
+
+
+/*COOKIE STYLING*/
+
+.cookie-container{
+    background-color: #131720;
+    color:white;
+    position: fixed;
+    bottom:0;
+    margin-top: auto;
+    transform: translateX(-850px);
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1020;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+   
+    
+}
+
+
+.cookie-container .cookie-policy{
+    width: 300px;
+}
+.cookie-buttons-container button{
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    background-color: #A01C0D;
+    color: white;
+    font-size: 17px;
+    border-width: 1px;
+    border-color: #A01C0D;
+}
+.cookie-buttons-container button:hover{
+    transition: 0.5s;
+    background-color: #CE2714;
+    border-color: #CE2714;
+    color: white;
+}
+#declineCookie{
+    margin-left: 40px;
+}
+.cookie-policy a{
+    text-decoration: none;
+    color: blue;
+}
+.cookie-policy a:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.cookie-container.active{
+  transform: translateX(0px);
+  transition: transform 0.5s ease;
+  z-index: 1020;
+}
+.header-cookie{
+    color: #A01C0D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+
+/*LIGHT MODE AND DARK MODE*/
+#theme{
+    color: white;
+}
+.background-theme{
+    position: fixed;
+    top:50px;
+    padding:8px;
+    z-index: 1020;
+    color: white;
+    float: right;
+    width: fit-content;
+    align-items: end;
+    margin-left: 76%;
+    display: none;
+    background-color: grey;
+    border-radius: 10px;
+    animation:  themeDive 0.5s ease-in-out both;
+}
+.background-theme p{
+    cursor: pointer;
+    padding:8px;
+    line-height: 10px;
+}
+.background-theme p:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+@keyframes themeDive{
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/*ALERT LIST TEXT IF THE USER HAS NOT SIGNED UP*/
+#alertListText{
+    text-align: center;
+    padding: 10px;
+    color:black;
+    background-color: white;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    display: none;
+}
+
+
+/*DARKMODE  AND LIGHT MODE FOR PHONES*/
+
+#darkModeSmall{
+    display: none;
+    color: grey;
+}
+
+
+
+
+

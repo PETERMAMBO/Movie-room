@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Room</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="decoration.css">
+        <link rel="stylesheet" href="bot.css">
+    </head>
+    <body>
+        <script src="home.js" defer></script>
+        <script src="response.js" defer></script>
+        <header id="topHeader">
+            <nav>
+                <li class="list-first-child"><a href="#">Movie Room</a></li>
+                <li id="largeWindowScroll"><a href="#">Movies</a></li>
+                <li id="openLargeList"><a href="#">My list</a></li>
+                <li><a href="#">Recents</a></li>
+                <li id="windowPrint"><a href="#">Print</a></li>
+                <div class="search-account">
+                    <li id="theme"><i class="material-icons">sunny</i></li>
+                    <li id="openBot"><a href="#">PAWPL bot</a></li>
+                <li id="openAccountLarge"><a href="#">Account</a></li>
+                </div>
+            </nav>
+        </header>
+
+        <aside>
+            <h2 id="sidebarMenuBtn">Movie Room</h2>
+            <i id="lightModeSmall" class="material-icons">sunny</i>
+            <div class="side-search">
+                <img src="default image.jpg" class="changeable-profile" style="width:35px; height:35px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </aside>
+
+        <div id="backgroundContainer" class="background-container">
+            <h2>Discover New movies that interest You</h2>
+            <p>Explore the movieverse and embark on the experience<br>
+                of a lifetime!</p>
+            <form id="form">
+              <div class="mic-plus-input">  <input type="text" id="middleSearch" class="middle-search" placeholder="Search for Movies"  autocomplete="off"><i id="micButton" class="material-icons">mic</i></div>
+                <div id="autoComplete" class="auto-complete">
+                </div>
+            </form>
+            
+        </div>
+       
+        
+        <section id="sidebarMenu">
+            <i id="closeButton" class="material-icons">close</i>
+            <li id="scrollToMovies"><a href="#"><i class="material-icons">movie</i>Movies</a></li>
+            <li><a href="#"><i class="material-icons">add</i>Recents</a></li>
+            <li id="openPopupList"><a href="#"><i class="material-icons">list</i>My list</a></li>
+            <li id="OpenPopupAccount"><a href="#"><i class="material-icons">person</i>Account</a></li>
+            <li id="printBtn"><a href="#"><i class="material-icons">print</i>Print</a></li>
+            <li id="openingBotMenu"><a href="#">PAWPL Bot</a></li>
+        </section>
+       
+        <main id="main">
+                <div class="card">
+                    <footer id="image"><img src="wakanda.jpeg" class="thumbnail"></footer>
+                    <h3 class="title">Wakanda Forever</h3>
+                </div>
+        </main>
+    
+
+        <div id="pre-loader"></div>
+
+        <div class="popup-container" id="popupContainer">
+            <div class="popup" id="popUp">
+                <i id="closePopupList" class="material-icons">close</i>
+                <p>You have no list at the moment</p>
+                <img class="floating-vector" src="classic-astronaut-character-with-flat-design.png">
+                <button id="AddMyListBtn">Add List</button>
+                <p id="alertListText"></p>
+            </div>
+        </div>
+        
+        <div id="account" class="profile-container">
+                <i id="accountClose" class="material-icons">close</i>
+                <h1>
+                    Edit Profile
+                </h1>
+                <hr>
+            <div class="input-profile-container">
+                <div class="profile-name">
+                    <input type="text" placeholder="Username" spellcheck="true" id="profileName">
+                </div>
+                <form>
+                    <img src="default image.jpg" class="changeable-profile">
+                    <label for="profile-pic">Edit</label>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="profile-pic">
+                </form>
+            </div>
+            
+           
+            <div class="save-cancel-delete-btns">
+                <button class="save-btn">Save</button>
+                <button id="cancelBtn" class="cancel-btn">Cancel</button>
+                <button id="deleteBtn" class="delete-btn">Delete Profile</button>
+            </div>
+        </div>
+
+        <div id="waitingMessage" class="waiting-message">
+            <p id="message"></p>
+            <img src="new two rings.gif">
+        </div>
+
+
+        <div  class="bot-directory">
+            <!--<div><i  class="material-icons">close</i></div>-->
+            <ul id="botDirectory">
+                <li id="chatWithMeBotDir">Chat with PAWPL bot</li>
+            </ul>
+        </div>
+
+        <div id="chatbotSection" class="main-chatbot-container">
+          <div class="chatbot-section">  
+            <div class="bot-profile">
+            <div class="bot-plus-peter">
+            <img src="bot-svgrepo-com.svg" class="bot-picture" id="botPicture">
+            <p>powered by PETER.DEV <br><span id="onlineStatus" style="color:green;display: none;">online</span></p>
+            </div>
+            <i id="closeBot" class="material-icons">close</i>
+            </div>
+            <div class="message-plus-text">
+            <div id="chatContainer" class="text-container">
+            <div class="chat-with-me-section">
+              
+            </div>
+            <div class="user-message" id="userMessage">
+             <!--check here and maybe return the p-->
+            </div>
+            </div>
+            <div class="user-message-input">
+                <textarea id="userTextArea" rows="4" col="50" placeholder="click send icon">
+
+                </textarea>
+                <i id="sendMessage" class="material-icons">send</i>
+            </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="about-us-page-container">
+            <div class="image-side-text">
+                <p>
+                     <span style="color: red;">Bienvenue!</span> to MovieRoom Your ultimate destination for discovering and enjoying<br>
+                     the best movies from around the world. Here at <span style="color:red">Movie Room</span> we are dedicated<br>
+                     to providing movie enthusiats with a seamless experience
+                </p>
+                <button id="learnMoreBtn">
+                    Subscribe
+                </button>
+            </div>
+            <div class="middle-container">
+                
+            </div>
+            <div class="footer-container">
+                <ul>
+                    <li id="WIDHelp">W.I.D help center</li>
+                    <li id="memepalHelp">Memepal help center</li>
+                    <li id="openEmailAccount">Movie Room help center</li>
+                    <li id="termsConditions">Terms and Conditions</li>
+                    <li id="privacyPolicy">Privacy Policy</li>
+                    <li><a href="tel:+254746370069">Contact Us</a></li>
+                </ul>
+               2024 MOVIEROOM
+            </div>
+        </div>
+      
+        <div id="backgroundTheme" class="background-theme">
+            <p class="closeTheme" id="lightMode">light mode</p>
+            <p class="closeTheme" id="darkMode">dark mode</p>
+            <p class="closeTheme" id="defaultMode">default</p>
+        </div>
+
+        
+
+        
+        
+        
+        
+
+
+    </body>
+</html>
